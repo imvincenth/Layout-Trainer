@@ -18,6 +18,7 @@ This should provide typing practice for people trying to switch to a different k
 </ul>
 
 <h3>Wireframes</h3>
+![Homepage](https://user-images.githubusercontent.com/60524243/131963740-7ad78825-2fa5-40cd-b2ad-3971fb371714.png)
 
 <h3>Technologies</h3>
 <ul>
