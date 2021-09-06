@@ -1,20 +1,19 @@
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     transition: 0.2s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-.container {
+.main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 500px;
     flex-direction: column;
+    height: 30vh;
     margin: 0 10px;
 }
