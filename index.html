@@ -5,17 +5,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="./dist/main.css" />
-    <script src="./dist/main.js"></script>
     <title>Layout Trainer</title>
 </head>
 
 <body>
-    <div id="textDisplay" class="text-display">type this</div>
-
     <div class="container">
-        <textarea id="textInput" class="text-input" autofocus>text</textarea>
+        <div class="quote-display" id="quoteDisplay"></div>
+        <textarea id="quoteInput" class="quote-input" autofocus></textarea>
     </div>
+
+    <div class="keyboard">
+        <div class="keyboard_keys">
+            <div class="keys">a</div>
+            <div class="keys two_key activatable_key">
+                <i class="material-icons">keyboard_capslock</i>
+            </div>
+            <div class="keys six_key">
+                <i class="material-icons">space_bar</i>
+            </div>
+        </div>
+    </div>
+    
+    <script src="./dist/main.js"></script>
 </body>
 
 </html>
