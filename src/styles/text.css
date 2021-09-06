@@ -7,8 +7,11 @@
 .text_input {
     width: 100%;
     max-width: 800px;
-    height: 7rem;
+    height: 3rem;
     margin: auto;
+    white-space: pre;
+    overflow-x: hidden;
+    overflow-y: hidden;
     resize: none;
     outline: none;
     padding: 0.5rem 1rem;
