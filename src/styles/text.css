@@ -1,7 +1,10 @@
 .text_display {
-    width: 800px;
-    background-color: black;
+    width: 100%;
+    max-width: 800px;
+    height: 10rem;
+    margin-top: 1rem;
     margin-bottom: 1rem;
+    border: 1px solid green;
 }
 
 .text_input {
@@ -14,12 +17,12 @@
     overflow-y: hidden;
     resize: none;
     outline: none;
-    padding: 0.5rem 1rem;
+    padding: 0.4rem 0.7rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 25px;
     background-color: transparent;
 }
 
-.quote-input:focus {
+.text_input:focus {
     border-color: green;
 }
