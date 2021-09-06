@@ -6,8 +6,18 @@
 
 .nav_bar {
     display: flex;
+    width: 100%;
+    height: 50px;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.spacing {
+    width: 100%;
     height: 150px;
 }
+
+/* to add more color themes, change here */
 
 body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
