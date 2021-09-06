@@ -22,6 +22,26 @@
     background-color: #404040;
 }
 
+.keys.active {
+    background-color: white;
+    color: 	#181818;
+}
+
+.keys.remove {
+    animation: keys_animation 0.0s forwards;
+}
+
+@keyframes keys_animation {
+    0% {
+        background-color: white;
+        color: 	#181818;
+    }
+    100% {
+        background-color: #181818;
+        color: white;
+    }
+}
+
 .backspace_key {
     width: 100px;
 }

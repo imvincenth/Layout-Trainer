@@ -27,3 +27,12 @@
 .text_input:focus {
     border-color: green;
 }
+
+.correct {
+    color: #A3BE8C;
+}
+
+.incorrect {
+    color: #BF616A;
+    text-decoration: underline;
+}
