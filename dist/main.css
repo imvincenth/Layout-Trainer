@@ -26,7 +26,7 @@
     left: 50%;
     margin: -25px 0 0 -25px;
     background-color: transparent;
-    height: 50px;
+    height: 60px;
     max-width: 50px;
     border: none;
     color: 	#404040;
@@ -82,7 +82,7 @@ body {
     vertical-align: top;
     font-size: 1.05rem;
     margin: 3px;
-    transition: 0.45s;
+    transition: 0.4s;
     min-width: 50px;
     height: 50px;
     background-color: #404040;
@@ -186,7 +186,6 @@ body {
     max-width: 500px;
     height: 40px;
     margin: auto;
-    margin-bottom: 1rem;
     white-space: pre;
     overflow-x: hidden;
     overflow-y: hidden;

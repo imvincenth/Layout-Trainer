@@ -9,6 +9,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
     let keys = document.querySelectorAll(".keys");
     let spaceKey = document.querySelector(".spacebar");
+    let backspace = document.querySelector(".backspace_key");
     let shiftLeft = document.querySelector(".shift_left");
     let shiftRight = document.querySelector(".shift_right");
     let capsLockKey = document.querySelector(".capslock_key");
@@ -53,16 +54,19 @@ window.addEventListener("DOMContentLoaded", function () {
             if (e.key === keys[i].getAttribute("keyname") || e.key === keys[i].getAttribute('lowerCaseName')) {
                 keys[i].classList.add("active");
             }
-            if (e.code == "Space") {
+            if (e.code === "Backspace") {
+                backspace.classList.add("active");
+            }
+            if (e.code === "Space") {
                 spaceKey.classList.add("active");
             }
-            if (e.code == "ShiftLeft") {
+            if (e.code === "ShiftLeft") {
                 shiftRight.classList.remove("active");
             }
-            if (e.code == "ShiftRight") {
+            if (e.code === "ShiftRight") {
                 shiftLeft.classList.remove("active");
             }
-            if (e.code == "CapsLock") {
+            if (e.code === "CapsLock") {
                 capsLockKey.classList.toggle("active");
             }
         }
@@ -73,6 +77,10 @@ window.addEventListener("DOMContentLoaded", function () {
             if (e.key === keys[i].getAttribute("keyname") || e.key === keys[i].getAttribute('lowerCaseName')) {
                 keys[i].classList.remove("active");
                 keys[i].classList.add("remove");
+            }
+            if (e.code === "Backspace") {
+                backspace.classList.remove("active");
+                backspace.classList.add("remove");
             }
             if (e.code === "Space") {
                 spaceKey.classList.remove("active");
