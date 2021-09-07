@@ -1,13 +1,14 @@
 import { Qwerty } from "./scripts/qwerty.js";
 import { Dvorak } from "./scripts/dvorak.js";
 import { renderNewQuote } from "./scripts/text.js";
+import { timerCheck } from "./scripts/metrics.js";
 
 window.addEventListener("DOMContentLoaded", function () {
     Dvorak.init();
     renderNewQuote();
 
     const textDisplayElement = document.getElementById("textDisplay");
-    const timerElement = document.getElementById("timer")
+    const timerElement = document.getElementById("timer");
 
     let keys = document.querySelectorAll(".keys");
     let spaceKey = document.querySelector(".spacebar");
@@ -15,8 +16,11 @@ window.addEventListener("DOMContentLoaded", function () {
     let shiftLeft = document.querySelector(".shift_left");
     let shiftRight = document.querySelector(".shift_right");
     let capsLockKey = document.querySelector(".capslock_key");
+    let winKey = document.querySelector(".win_key");
     let textInput = document.querySelector(".text_input");
     let refreshButton = document.querySelector(".refresh");
+
+    let runs = 0;
 
     for (let i = 0; i < keys.length; i++) {
         keys[i].setAttribute("keyname", keys[i].innerText);
@@ -43,8 +47,14 @@ window.addEventListener("DOMContentLoaded", function () {
             }
         })
         
-        if (correct) renderNewQuote();
+        if (correct) {
+            runs++;
+            renderNewQuote();
+            // timerCheck();
+        }
     })
+
+    
 
     refreshButton.addEventListener("click", () => {
         renderNewQuote();
@@ -71,6 +81,9 @@ window.addEventListener("DOMContentLoaded", function () {
             if (e.code === "CapsLock") {
                 capsLockKey.classList.toggle("active");
             }
+            if (e.code === "MetaLeft") {
+                winKey.classList.add("active");
+            }
         }
     })
 
@@ -95,6 +108,9 @@ window.addEventListener("DOMContentLoaded", function () {
             if (e.code === "ShiftRight") {
                 shiftLeft.classList.remove("active");
                 shiftLeft.classList.remove("remove");
+            }
+            if (e.code === "MetaLeft") {
+                winKey.classList.remove("active");
             }
             this.setTimeout(() => {
                 keys[i].classList.remove("remove");
