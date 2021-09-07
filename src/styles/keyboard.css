@@ -3,11 +3,13 @@
     max-width: 900px;
     min-width: 900px;
     padding: 3px;
+    padding-left: 30px;
     background-color: transparent;
     border-radius: 0.5rem;
     position: absolute;
     top: 65%;
     left: 50%;
+    right: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%)
 }
