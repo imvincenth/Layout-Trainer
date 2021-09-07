@@ -12,7 +12,8 @@ const Qwerty = {
     },
 
     init() {
+        // Creating the main elements ()
         this.elements.main = document.createElement("div");
-        
+
     }
 }

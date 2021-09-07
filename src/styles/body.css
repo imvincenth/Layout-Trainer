@@ -17,6 +17,10 @@
     height: 150px;
 }
 
+.refresh {
+    height: 100px
+}
+
 /* to add more color themes, change here */
 
 body {

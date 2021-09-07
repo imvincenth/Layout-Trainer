@@ -1,10 +1,8 @@
 .text_display {
+    position: absolute;
+    top: 200px;
     width: 100%;
     max-width: 700px;
-    margin-top: 10px;
-    margin-bottom: 1rem;
-    margin-left: calc(1rem + 2px);
-    margin-right: calc(1rem + 2px);
     font-size: 25px;
 }
 
