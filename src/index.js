@@ -13,6 +13,7 @@ window.addEventListener("DOMContentLoaded", function () {
     let shiftRight = document.querySelector(".shift_right");
     let capsLockKey = document.querySelector(".capslock_key");
     let textInput = document.querySelector(".text_input");
+    let refreshButton = document.querySelector(".refresh");
 
     for (let i = 0; i < keys.length; i++) {
         keys[i].setAttribute("keyname", keys[i].innerText);
@@ -40,6 +41,10 @@ window.addEventListener("DOMContentLoaded", function () {
         })
         
         if (correct) renderNewQuote();
+    })
+
+    refreshButton.addEventListener("click", () => {
+        renderNewQuote();
     })
 
     window.addEventListener("keydown", function(e) {
