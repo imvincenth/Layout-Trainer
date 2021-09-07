@@ -18,7 +18,18 @@
 }
 
 .refresh {
-    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    height: 50px;
+    max-width: 50px;
+    border: none;
+    color: 	#404040;
+}
+
+.refresh:active {
+    color: white;
 }
 
 /* to add more color themes, change here */
