@@ -61,7 +61,7 @@ export const Dvorak = {
 
                 case "tab":
                     keyElement.classList.add("tab_key");
-                    keyElement.textContent = "Tab";
+                    keyElement.textContent = "tab";
 
                     break;
 
@@ -79,37 +79,37 @@ export const Dvorak = {
 
                 case "enter":
                     keyElement.classList.add("enter_key");
-                    keyElement.textContent = "Enter";
+                    keyElement.textContent = "enter";
 
                     break;
 
                 case "lshift":
                     keyElement.classList.add("lshift_key", "shift_left");
-                    keyElement.textContent = "Shift";
+                    keyElement.textContent = "shift";
                     
                     break;
                 
                 case "rshift":
                     keyElement.classList.add("rshift_key", "shift_right");
-                    keyElement.textContent = "Shift";
+                    keyElement.textContent = "shift";
 
                     break;
 
                 case "ctrl":
                     keyElement.classList.add("ctrl_key");
-                    keyElement.textContent = "Ctrl";
+                    keyElement.textContent = "ctrl";
 
                     break;
 
                 case "win":
                     keyElement.classList.add("win_key");
-                    keyElement.textContent = "Win";
+                    keyElement.textContent = "win";
 
                     break;
 
                 case "alt":
                     keyElement.classList.add("alt_key");
-                    keyElement.textContent = "Alt";
+                    keyElement.textContent = "alt";
 
                     break;
 
@@ -121,7 +121,7 @@ export const Dvorak = {
 
                 case "fn":
                     keyElement.classList.add("fn_key");
-                    keyElement.textContent = "Fn";
+                    keyElement.textContent = "fn";
 
                     break;
 
