@@ -7,6 +7,7 @@ window.addEventListener("DOMContentLoaded", function () {
     renderNewQuote();
 
     const textDisplayElement = document.getElementById("textDisplay");
+    const timerElement = document.getElementById("timer")
 
     let keys = document.querySelectorAll(".keys");
     let spaceKey = document.querySelector(".spacebar");

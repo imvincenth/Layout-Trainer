@@ -1,6 +1,14 @@
+import { startTimer } from "../scripts/metrics.js";
+
 const RANDOM_QUOTE_API_URL = "https://api.quotable.io/random";
 const textDisplayElement = document.getElementById("textDisplay");
 const textInputElement = document.getElementById("textInput");
+
+function getRandomQuote() {
+    return fetch(RANDOM_QUOTE_API_URL)
+    .then(res => res.json())
+    .then(data => data.content);
+}
 
 export async function renderNewQuote() {
     const quote = await getRandomQuote();
@@ -11,10 +19,5 @@ export async function renderNewQuote() {
         textDisplayElement.appendChild(charSpan);
     })
     textInputElement.value = null;
-}
-
-function getRandomQuote() {
-    return fetch(RANDOM_QUOTE_API_URL)
-        .then(res => res.json())
-        .then(data => data.content);
+    startTimer();
 }
