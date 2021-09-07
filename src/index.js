@@ -45,6 +45,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
     refreshButton.addEventListener("click", () => {
         renderNewQuote();
+        textInput.focus();
     })
 
     window.addEventListener("keydown", function(e) {
