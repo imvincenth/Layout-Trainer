@@ -4,11 +4,7 @@
     flex-direction: column;
     padding: 3px;
     background-color: transparent;
-}
-
-.row {
-    display: flex;
-    justify-content: center;
+    border-radius: 0.5rem;
 }
 
 .keys {
@@ -20,6 +16,7 @@
     width: 50px;
     height: 50px;
     background-color: #404040;
+    border-radius: 0.5rem;
 }
 
 .keys.active {
