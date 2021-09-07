@@ -12,18 +12,13 @@
     margin-left: 20px;
 }
 
-.spacing {
-    width: 100%;
-    height: 150px;
-}
-
 .refresh {
     position: absolute;
     top: 50%;
     left: 50%;
     margin: -25px 0 0 -25px;
     background-color: transparent;
-    height: 60px;
+    height: 50px;
     max-width: 50px;
     border: none;
     color: 	#404040;
@@ -48,8 +43,5 @@ body {
 }
 
 .main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 300px;
+    
 }

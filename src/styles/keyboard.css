@@ -3,7 +3,7 @@
     max-width: 900px;
     min-width: 900px;
     padding: 3px;
-    padding-left: 30px;
+    padding-left: 33px;
     background-color: transparent;
     border-radius: 0.5rem;
     position: absolute;
@@ -19,7 +19,7 @@
     justify-content: center;
     align-items: center;
     vertical-align: top;
-    font-size: 1.05rem;
+    font-size: 1.1rem;
     margin: 3px;
     transition: 0.4s;
     min-width: 50px;
