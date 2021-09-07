@@ -1,4 +1,4 @@
-export const Qwerty = {
+export const Dvorak = {
     elements: {
         main: null,
         keysContainer: null,
@@ -31,10 +31,10 @@ export const Qwerty = {
     _createKeys() {
         const fragment = document.createDocumentFragment();
         const keyLayout = [
-            "`", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "backspace",
-            "tab", "q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "[", "]", "\\",
-            "caps", "a", "s", "d", "f", "g", "h", "j", "k", "l", ";", "'", "enter",
-            "lshift", "z", "x", "c", "v", "b", "n", "m", ",", ".", "?", "rshift",
+            "`", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "[", "]", "backspace",
+            "tab", "'", ",", ".", "p", "y", "f", "g", "c", "r", "l", "/", "=", "\\",
+            "caps", "a", "o", "e", "u", "i", "d", "h", "t", "n", "s", "-", "enter",
+            "lshift", ";", "q", "j", "k", "x", "b", "m", "w", "v", "z", "rshift",
             "ctrl", "win", "alt", "space", "alt", "fn", "ctrl"
         ];
 

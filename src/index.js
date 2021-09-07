@@ -1,8 +1,9 @@
 import { Qwerty } from "./scripts/qwerty.js";
+import { Dvorak } from "./scripts/dvorak.js";
 import { renderNewQuote } from "./scripts/text.js";
 
 window.addEventListener("DOMContentLoaded", function () {
-    Qwerty.init();
+    Dvorak.init();
     renderNewQuote();
 
     const textDisplayElement = document.getElementById("textDisplay");
