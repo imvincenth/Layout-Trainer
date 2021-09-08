@@ -4,6 +4,8 @@ const RANDOM_QUOTE_API_URL = "https://api.quotable.io/random";
 const textDisplayElement = document.getElementById("textDisplay");
 const textInputElement = document.getElementById("textInput");
 
+const CUSTOM_KOREAN_API = {}
+
 function getRandomQuote() {
     return fetch(RANDOM_QUOTE_API_URL)
     .then(res => res.json())
