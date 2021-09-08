@@ -1,11 +1,13 @@
 import { Qwerty } from "./scripts/qwerty.js";
 import { Dvorak } from "./scripts/dvorak.js";
 import { renderNewQuote } from "./scripts/text.js";
+import { resetTimer, startTimer } from "./scripts/metrics.js";
 import { timerCheck } from "./scripts/metrics.js";
 
 window.addEventListener("DOMContentLoaded", function () {
     Dvorak.init();
     renderNewQuote();
+    resetTimer();
 
     const textDisplayElement = document.getElementById("textDisplay");
     const timerElement = document.getElementById("timer");
@@ -20,7 +22,8 @@ window.addEventListener("DOMContentLoaded", function () {
     let textInput = document.querySelector(".text_input");
     let refreshButton = document.querySelector(".refresh");
 
-    let runs = 0;
+    let typeStart = false;
+    let timer;
 
     for (let i = 0; i < keys.length; i++) {
         keys[i].setAttribute("keyname", keys[i].innerText);
@@ -29,6 +32,11 @@ window.addEventListener("DOMContentLoaded", function () {
     textInput.addEventListener('input', () => {
         const arrQuote = textDisplayElement.querySelectorAll("span");
         const arrVal = textInput.value.split("");
+        
+        if (!typeStart) {
+            typeStart = true;
+            timer = setInterval(startTimer, 1000);
+        }
         
         let correct = true;
         arrQuote.forEach((charSpan, i) => {
@@ -48,13 +56,13 @@ window.addEventListener("DOMContentLoaded", function () {
         })
         
         if (correct) {
-            runs++;
+            typeStart = false;
+            clearInterval(timer);
             renderNewQuote();
-            // timerCheck();
+            // timerCheck(wordCount);
         }
     })
 
-    
 
     refreshButton.addEventListener("click", () => {
         renderNewQuote();

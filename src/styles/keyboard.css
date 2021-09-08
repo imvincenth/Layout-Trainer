@@ -1,9 +1,8 @@
 .keyboard_wrap {
-    width: 100%;
-    max-width: 900px;
-    min-width: 900px;
+    min-width: 841px;
+    max-width: 841px;
+    max-height: 285px;
     padding: 3px;
-    padding-left: 33px;
     background-color: transparent;
     border-radius: 0.5rem;
     position: absolute;

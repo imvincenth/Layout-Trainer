@@ -1,4 +1,4 @@
-import { startTimer } from "../scripts/metrics.js";
+import { resetTimer } from "../scripts/metrics.js";
 
 const RANDOM_QUOTE_API_URL = "https://api.quotable.io/random";
 const textDisplayElement = document.getElementById("textDisplay");
@@ -19,5 +19,5 @@ export async function renderNewQuote() {
         textDisplayElement.appendChild(charSpan);
     })
     textInputElement.value = null;
-    startTimer();
+    resetTimer();
 }
