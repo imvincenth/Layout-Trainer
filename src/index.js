@@ -9,8 +9,30 @@ import { resetTimer, startTimer } from "./scripts/metrics.js";
 import { timerCheck, timerCheckKorean } from "./scripts/metrics.js";
 
 let currentLayout;
-let layouts = [Qwerty, Korean];
-let layoutNames = ["qwerty", "korean"];
+let layouts = [Korean, Dvorak, Colemak, Qwerty];
+let layoutNames = ["korean", "dvorak", "colemak", "qwerty"];
+layouts.forEach(layout => {
+    layout.init();
+})
+
+const layout = document.getElementById("layoutChanger");
+const layoutArrow = document.querySelectorAll(".layout_button");
+
+layoutArrow.forEach(arrow => {
+    arrow.addEventListener("click", () => {
+        layouts.push(layouts.shift());
+        layoutNames.push(layoutNames.shift());
+        currentLayout.elements.main.style.display = "none";
+        layout.innerText = layoutNames[0];
+        currentLayout = layouts[0];
+        currentLayout.elements.main.style.display = "block";
+        if (layout.innerText === "korean") {
+            renderKRQuote();
+        } else {
+            renderNewQuote();
+        }
+    })
+})
 
 // let currentText;
 // let renderStyles = [renderNewQuote, renderKRQuote];
@@ -18,41 +40,16 @@ let layoutNames = ["qwerty", "korean"];
 
 window.addEventListener("DOMContentLoaded", function () {
     currentLayout = layouts[0];
-    currentLayout.init();
-
-    const layout = document.getElementById("layoutChanger");
-    const layoutArrow = document.getElementById("layoutButton");
+    if (currentLayout) currentLayout.elements.main.style.display = "block";
     layout.innerText = layoutNames[0];
 
-    // renderNewQuote();
-    // renderStyle = renderStyles[0];
-    // if (renderStyle === "english") {
-    //     renderNewQuote();
-    // }
-
-    renderKRQuote();
+    if (layout.innerText === "korean") {
+        renderKRQuote();
+    } else {
+        renderNewQuote();
+    }
+    
     resetTimer();
-
-    layoutArrow.addEventListener("click", () => {
-        layouts.push(layouts.shift());
-        layoutNames.push(layoutNames.shift());
-        currentLayout.elements.main.style.display = "none";
-        layout.innerText = layoutNames[0];
-        currentLayout = layouts[0];
-        currentLayout.init();
-        
-        keys = document.querySelectorAll(".keys");
-        spaceKey = document.querySelector(".spacebar");
-        backspace = document.querySelector(".backspace_key");
-        shiftLeft = document.querySelector(".shift_left");
-        shiftRight = document.querySelector(".shift_right");
-        capsLockKey = document.querySelector(".capslock_key");
-        winKey = document.querySelector(".win_key");
-
-        for (let i = 0; i < keys.length; i++) {
-            keys[i].setAttribute("keyname", keys[i].innerText);
-        }
-    })
 
     const textDisplayElement = document.getElementById("textDisplay");
 
@@ -102,18 +99,25 @@ window.addEventListener("DOMContentLoaded", function () {
         
         if (correct) {
             typeStart = false;
-            // renderNewQuote();
-            renderKRQuote();
+            if (layout.innerText === "korean") {
+                renderKRQuote();
+            } else {
+                renderNewQuote();
+            }
             clearInterval(timer);
-            timerCheckKorean(charCount);
+            if (layout.innerText === "korean") {
+                timerCheckKorean(charCount);
+            } else {
+                timerCheck(wordCount);
+            }
         }
     })
 
 
     refreshButton.addEventListener("click", () => {
         typeStart = false;
-        // renderNewQuote();
-        renderKRQuote();
+        renderNewQuote();
+        // renderKRQuote();
         clearInterval(timer);
         textInput.focus();
     })

@@ -16,6 +16,7 @@ export const Qwerty = {
         this.elements.main = document.createElement("div");
         this.elements.keysContainer = document.createElement("div");
         this.elements.layoutContainer = document.createElement("div");
+        this.elements.main.style.display = "none";
         
         // Setup the main elements
         this.elements.main.classList.add("main");

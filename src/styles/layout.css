@@ -6,17 +6,19 @@
     display: flex;
     justify-content: center;
     margin-top: 10px;
+    margin-left: 25px;
 }
 
 .layout_changer {
     /* float: left; */
-    margin-top: 1px;
     color: 	#404040;
+    font-size: larger;
     align-self: flex-end;
 }
 
 .layout_button {
     /* float: right; */
+    margin-top: 1px;
     background-color: transparent;
     color: 	#404040;
     border: none;
