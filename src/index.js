@@ -2,24 +2,26 @@ import { Qwerty } from "./scripts/qwerty.js";
 import { Dvorak } from "./scripts/dvorak.js";
 import { Colemak } from "./scripts/colemak.js";
 import { Korean } from "./scripts/korean.js";
+import { renderKRQuote, charCount } from "./scripts/textkr.js";
 import { alertBanner } from "./scripts/metrics.js";
-import { renderNewQuote, wordCount } from "./scripts/text.js";
+import { renderNewQuote, wordCount } from "./scripts/texten.js";
 import { resetTimer, startTimer } from "./scripts/metrics.js";
-import { timerCheck } from "./scripts/metrics.js";
+import { timerCheck, timerCheckKorean } from "./scripts/metrics.js";
 
 const layout = document.getElementById("layoutChanger");
 const layoutArrow = document.getElementById("layoutButton");
 
 let currentLayout;
-let layouts = [Dvorak, Colemak];
-let layoutNames = ["dvorak", "colemak"];
+let layouts = [Korean, Dvorak, Colemak];
+let layoutNames = ["korean", "dvorak", "colemak"];
 
 window.addEventListener("DOMContentLoaded", function () {
     currentLayout = layouts[0];
     currentLayout.init();
 
     layout.innerText = layoutNames[0];
-    renderNewQuote();
+    // renderNewQuote();
+    renderKRQuote();
     resetTimer();
 
     layoutArrow.addEventListener("click", () => {
@@ -94,7 +96,7 @@ window.addEventListener("DOMContentLoaded", function () {
             typeStart = false;
             renderNewQuote();
             clearInterval(timer);
-            timerCheck(wordCount);
+            timerCheckKorean(charCount);
         }
     })
 
