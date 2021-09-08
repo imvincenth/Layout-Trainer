@@ -20,7 +20,9 @@ window.addEventListener("DOMContentLoaded", function () {
     currentLayout = layouts[0];
     currentLayout.init();
 
+    const layout = document.getElementById("layoutChanger");
     const layoutArrow = document.getElementById("layoutButton");
+    layout.innerText = layoutNames[0];
 
     // renderNewQuote();
     // renderStyle = renderStyles[0];
@@ -35,6 +37,7 @@ window.addEventListener("DOMContentLoaded", function () {
         layouts.push(layouts.shift());
         layoutNames.push(layoutNames.shift());
         currentLayout.elements.main.style.display = "none";
+        layout.innerText = layoutNames[0];
         currentLayout = layouts[0];
         currentLayout.init();
         

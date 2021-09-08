@@ -7,6 +7,7 @@
 
 .textinput_box {
     display: grid;
+    white-space: nowrap;
 }
 
 .text_display {
@@ -23,14 +24,15 @@
     white-space: pre;
     overflow-x: hidden;
     overflow-y: hidden;
-    resize: none;
+    box-shadow: none;
+    border: transparent;
     outline: none;
     padding: 0.3rem 0.7rem;
     border-radius: .5rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 25px;
     color: white;
-    background-color: #181818;
+    background-color: #131313;
 }
 
 .text_input:focus {
