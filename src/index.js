@@ -10,17 +10,21 @@ const layout = document.getElementById("layoutChanger");
 const layoutArrow = document.getElementById("layoutButton");
 
 let currentLayout;
-let layouts = ["dvorak", "qwerty"];
+let layouts = [Qwerty, Dvorak];
 
 window.addEventListener("DOMContentLoaded", function () {
-    Dvorak.init();
+    currentLayout = layouts[0];
+    currentLayout.init();
+
     layout.innerText = "dvorak";
     renderNewQuote();
     resetTimer();
 
     layoutArrow.addEventListener("click", () => {
-        Qwerty.init();
-        layout.innerText = "qwerty";
+        layouts.push(layouts.shift());
+        currentLayout.elements.main.style.display = "none";
+        currentLayout = layouts[0];
+        currentLayout.init();
     })
 
     const textDisplayElement = document.getElementById("textDisplay");

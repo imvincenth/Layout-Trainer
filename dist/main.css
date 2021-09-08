@@ -60,34 +60,6 @@ body {
 .main {
     
 }
-
-.layout_changer {
-    /* position: absolute;
-    top: 89.1%;
-    left: 50%;
-    margin: -25px 0 0 -25px; */
-    color: 	#404040;
-}
-
-.layout_button {
-    /* position: absolute;
-    top: 89%;
-    left: 55%;
-    margin: -25px 0 0 -25px; */
-    background-color: transparent;
-    color: 	#404040;
-    border: none;
-    height: 20px;
-    width: 20px;
-}
-
-.layout_button:active {
-    color: white;
-}
-
-.layout_button:focus {
-    outline: none;
-}
 /*!*******************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/keyboard.css ***!
   \*******************************************************************************************************/
@@ -202,7 +174,7 @@ body {
 
 .text_display {
     width: 100%;
-    max-width: 600px;
+    max-width: 500px;
     font-size: 25px;
 }
 
@@ -253,6 +225,39 @@ body {
     height: 20px;
     font-size: 1.1rem;
     color: white;
+}
+/*!*****************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/layout.css ***!
+  \*****************************************************************************************************/
+.layout_box {
+    position: fixed;
+    top: 89.1%;
+    left: 50%;
+    margin: -25px 0 0 -25px;
+}
+
+.layout_changer {
+    float: left;
+    margin-top: 1px;
+    color: 	#404040;
+    align-self: flex-end;
+}
+
+.layout_button {
+    float: right;
+    background-color: transparent;
+    color: 	#404040;
+    border: none;
+    height: 20px;
+    width: 20px;
+}
+
+.layout_button:active {
+    color: white;
+}
+
+.layout_button:focus {
+    outline: none;
 }
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
