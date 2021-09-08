@@ -2,6 +2,7 @@ export const Qwerty = {
     elements: {
         main: null,
         keysContainer: null,
+        layoutContainer: null,
         keys: []
     },
 
@@ -14,22 +15,38 @@ export const Qwerty = {
         // Creating the main elements (main < keyboard wrap < keyboard_keys < row < keys)
         this.elements.main = document.createElement("div");
         this.elements.keysContainer = document.createElement("div");
+        this.elements.layoutContainer = document.createElement("div");
         
         // Setup the main elements
         this.elements.main.classList.add("main");
         this.elements.keysContainer.classList.add("keyboard_wrap");
+        this.elements.layoutContainer.classList.add("layout_box");
         this.elements.keysContainer.appendChild(this._createKeys());
-
+        
         // Adding all keys as NodeList for the CapsLock function
-
+        
         // Add to DOM
         document.body.appendChild(this.elements.main);
         this.elements.main.appendChild(this.elements.keysContainer);
-
+        this.elements.main.appendChild(this.elements.layoutContainer);
     },
-
+    
     _createKeys() {
         const fragment = document.createDocumentFragment();
+        
+        // Creating the layout box feature
+        const layoutElement = document.createElement("div");
+        layoutElement.classList.add("layout_changer");
+        layoutElement.id = "layoutChanger";
+        layoutElement.innerText = "qwerty";
+
+        const layoutButton = document.createElement("button");
+        layoutButton.classList.add("layout_button");
+        layoutButton.id = "layoutButton";
+
+        this.elements.layoutContainer.appendChild(layoutElement);
+        this.elements.layoutContainer.appendChild(layoutButton);
+
         const keyLayout = [
             "`", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "backspace",
             "tab", "q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "[", "]", "\\",
@@ -42,6 +59,8 @@ export const Qwerty = {
         const createIconHTML = function (iconName) {
             return `<i class="material-icons">${iconName}</i>`;
         }
+
+        layoutButton.innerHTML = createIconHTML("arrow_forward_ios");
 
         keyLayout.forEach(key => {
             const keyElement = document.createElement("div");

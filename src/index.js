@@ -8,30 +8,36 @@ import { renderNewQuote, wordCount } from "./scripts/texten.js";
 import { resetTimer, startTimer } from "./scripts/metrics.js";
 import { timerCheck, timerCheckKorean } from "./scripts/metrics.js";
 
-const layout = document.getElementById("layoutChanger");
-const layoutArrow = document.getElementById("layoutButton");
-
 let currentLayout;
-let layouts = [Korean, Dvorak, Colemak];
-let layoutNames = ["korean", "dvorak", "colemak"];
+let layouts = [Qwerty, Korean];
+let layoutNames = ["qwerty", "korean"];
+
+// let currentText;
+// let renderStyles = [renderNewQuote, renderKRQuote];
+// let renderStyleNames = ["english", "korean"];
 
 window.addEventListener("DOMContentLoaded", function () {
     currentLayout = layouts[0];
     currentLayout.init();
 
-    layout.innerText = layoutNames[0];
+    const layoutArrow = document.getElementById("layoutButton");
+
     // renderNewQuote();
+    // renderStyle = renderStyles[0];
+    // if (renderStyle === "english") {
+    //     renderNewQuote();
+    // }
+
     renderKRQuote();
     resetTimer();
 
     layoutArrow.addEventListener("click", () => {
         layouts.push(layouts.shift());
         layoutNames.push(layoutNames.shift());
-        layout.innerText = layoutNames[0];
         currentLayout.elements.main.style.display = "none";
         currentLayout = layouts[0];
         currentLayout.init();
-
+        
         keys = document.querySelectorAll(".keys");
         spaceKey = document.querySelector(".spacebar");
         backspace = document.querySelector(".backspace_key");
@@ -46,7 +52,6 @@ window.addEventListener("DOMContentLoaded", function () {
     })
 
     const textDisplayElement = document.getElementById("textDisplay");
-    // const timerElement = document.getElementById("timer");
 
     let keys = document.querySelectorAll(".keys");
     let spaceKey = document.querySelector(".spacebar");
