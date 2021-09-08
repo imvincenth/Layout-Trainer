@@ -1,17 +1,17 @@
-.textDisplayBox {
+.textdisplay_box {
     display: grid;
     justify-content: center;
     align-items: center;
     height: 300px;
 }
 
-.textInputBox {
+.textinput_box {
     display: grid;
 }
 
 .text_display {
     width: 100%;
-    max-width: 800px;
+    max-width: 600px;
     font-size: 25px;
 }
 
@@ -38,10 +38,10 @@
 }
 
 .correct {
-    color: #A3BE8C;
+    color: green;
 }
 
 .incorrect {
-    color: #BF616A;
+    color: red;
     text-decoration: underline;
 }

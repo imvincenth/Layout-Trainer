@@ -59,7 +59,16 @@ body {
 .main {
     display: flex;
     justify-content: center;
+}
 
+.layout_changer {
+    position: absolute;
+    top: 87%;
+    left: 65%;
+    right: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    color: 	#404040;
 }
 /*!*******************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/keyboard.css ***!
@@ -168,20 +177,20 @@ body {
 /*!***************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/text.css ***!
   \***************************************************************************************************/
-.textDisplayBox {
+.textdisplay_box {
     display: grid;
     justify-content: center;
     align-items: center;
     height: 300px;
 }
 
-.textInputBox {
+.textinput_box {
     display: grid;
 }
 
 .text_display {
     width: 100%;
-    max-width: 800px;
+    max-width: 600px;
     font-size: 25px;
 }
 
@@ -208,11 +217,11 @@ body {
 }
 
 .correct {
-    color: #A3BE8C;
+    color: green;
 }
 
 .incorrect {
-    color: #BF616A;
+    color: red;
     text-decoration: underline;
 }
 /*!******************************************************************************************************!*\

@@ -56,5 +56,14 @@ body {
 .main {
     display: flex;
     justify-content: center;
+}
 
+.layout_changer {
+    position: absolute;
+    top: 87%;
+    left: 65%;
+    right: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    color: 	#404040;
 }

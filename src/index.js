@@ -5,13 +5,16 @@ import { renderNewQuote, wordCount } from "./scripts/text.js";
 import { resetTimer, startTimer } from "./scripts/metrics.js";
 import { timerCheck } from "./scripts/metrics.js";
 
+const layout = document.getElementById("layoutChanger");
+
 window.addEventListener("DOMContentLoaded", function () {
     Dvorak.init();
+    layout.innerText = "dvorak";
     renderNewQuote();
     resetTimer();
 
     const textDisplayElement = document.getElementById("textDisplay");
-    const timerElement = document.getElementById("timer");
+    // const timerElement = document.getElementById("timer");
 
     let keys = document.querySelectorAll(".keys");
     let spaceKey = document.querySelector(".spacebar");
