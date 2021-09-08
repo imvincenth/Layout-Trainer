@@ -24,10 +24,7 @@
 }
 
 .refresh {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: -25px 0 0 -25px;
+    margin: auto;
     background-color: transparent;
     height: 50px;
     max-width: 50px;
@@ -51,31 +48,38 @@ body {
     transition: 0.2s;
     background-color: #181818;
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .main {
-    display: flex;
-    justify-content: center;
+    
 }
 
 .layout_changer {
-    position: absolute;
-    top: 89.2%;
+    /* position: absolute;
+    top: 89.1%;
     left: 50%;
-    margin: -25px 0 0 -25px;
+    margin: -25px 0 0 -25px; */
     color: 	#404040;
 }
 
 .layout_button {
-    position: absolute;
+    /* position: absolute;
     top: 89%;
     left: 55%;
-    margin: -25px 0 0 -25px;
+    margin: -25px 0 0 -25px; */
     background-color: transparent;
-    color: 	#b3b3b3;
+    color: 	#404040;
     border: none;
     height: 20px;
     width: 20px;
+}
+
+.layout_button:active {
+    color: white;
 }
 
 .layout_button:focus {

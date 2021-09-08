@@ -7,12 +7,21 @@ import { resetTimer, startTimer } from "./scripts/metrics.js";
 import { timerCheck } from "./scripts/metrics.js";
 
 const layout = document.getElementById("layoutChanger");
+const layoutArrow = document.getElementById("layoutButton");
+
+let currentLayout;
+let layouts = ["dvorak", "qwerty"];
 
 window.addEventListener("DOMContentLoaded", function () {
     Dvorak.init();
     layout.innerText = "dvorak";
     renderNewQuote();
     resetTimer();
+
+    layoutArrow.addEventListener("click", () => {
+        Qwerty.init();
+        layout.innerText = "qwerty";
+    })
 
     const textDisplayElement = document.getElementById("textDisplay");
     // const timerElement = document.getElementById("timer");
