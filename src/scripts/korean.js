@@ -31,10 +31,10 @@ export const Dvorak = {
     _createKeys() {
         const fragment = document.createDocumentFragment();
         const keyLayout = [
-            "`", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "[", "]", "backspace",
-            "tab", "ㅂ", "ㅈ", ".", "p", "y", "f", "g", "c", "r", "l", "/", "=", "\\",
-            "caps", "a", "o", "e", "u", "i", "d", "h", "t", "n", "s", "-", "enter",
-            "lshift", ";", "q", "j", "k", "x", "b", "m", "w", "v", "z", "rshift",
+            "`", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "backspace",
+            "tab", "ㅂ", "ㅈ", "ㄷ", "ㄱ", "ㅅ", "ㅛ", "ㅕ", "ㅑ", "ㅐ", "ㅔ", "[", "]", "\\",
+            "caps", "ㅁ", "ㄴ", "ㅇ", "ㄹ", "ㅎ", "ㅗ", "ㅓ", "ㅏ", "ㅣ", ";", "'", "enter",
+            "lshift", "ㅋ", "ㅌ", "ㅊ", "ㅍ", "ㅠ", "ㅜ", "ㅡ", ",", ".", "/", "rshift",
             "ctrl", "win", "alt", "space", "alt", "fn", "ctrl"
         ];
 

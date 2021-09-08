@@ -59,15 +59,17 @@ window.addEventListener("DOMContentLoaded", function () {
         
         if (correct) {
             typeStart = false;
-            clearInterval(timer);
             renderNewQuote();
+            clearInterval(timer);
             timerCheck(wordCount);
         }
     })
 
 
     refreshButton.addEventListener("click", () => {
+        typeStart = false;
         renderNewQuote();
+        clearInterval(timer);
         textInput.focus();
     })
 
