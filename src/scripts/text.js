@@ -10,8 +10,11 @@ function getRandomQuote() {
     .then(data => data.content);
 }
 
+export let wordCount;
+
 export async function renderNewQuote() {
     const quote = await getRandomQuote();
+    wordCount = quote.split(" ").length;
     textDisplayElement.innerHTML = "";
     quote.split("").forEach(char => {
         const charSpan = document.createElement("span");

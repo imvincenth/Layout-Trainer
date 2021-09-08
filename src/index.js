@@ -1,6 +1,6 @@
 import { Qwerty } from "./scripts/qwerty.js";
 import { Dvorak } from "./scripts/dvorak.js";
-import { renderNewQuote } from "./scripts/text.js";
+import { renderNewQuote, wordCount } from "./scripts/text.js";
 import { resetTimer, startTimer } from "./scripts/metrics.js";
 import { timerCheck } from "./scripts/metrics.js";
 
@@ -59,7 +59,7 @@ window.addEventListener("DOMContentLoaded", function () {
             typeStart = false;
             clearInterval(timer);
             renderNewQuote();
-            // timerCheck(wordCount);
+            timerCheck(wordCount);
         }
     })
 
