@@ -104,7 +104,8 @@ window.addEventListener("DOMContentLoaded", function () {
 
     refreshButton.addEventListener("click", () => {
         typeStart = false;
-        renderNewQuote();
+        // renderNewQuote();
+        renderKRQuote();
         clearInterval(timer);
         textInput.focus();
     })
