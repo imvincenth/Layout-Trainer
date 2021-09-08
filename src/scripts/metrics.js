@@ -21,6 +21,6 @@ export function timerCheck(wordCount) {
     alertBanner.innerText = (String(Math.floor((wordCount * 60) / Number(timerElement.innerText))) + " WPM");
 }
 
-function timerCheckKorean(charCount) {
+export function timerCheckKorean(charCount) {
     alertBanner.innerText = (String(Math.floor((charCount * 60) / Number(timerElement.innerText))) + " CPM");
 }
