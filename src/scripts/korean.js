@@ -1,4 +1,4 @@
-export const Dvorak = {
+export const Korean = {
     elements: {
         main: null,
         keysContainer: null,
