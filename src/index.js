@@ -25,6 +25,18 @@ window.addEventListener("DOMContentLoaded", function () {
         currentLayout.elements.main.style.display = "none";
         currentLayout = layouts[0];
         currentLayout.init();
+
+        keys = document.querySelectorAll(".keys");
+        spaceKey = document.querySelector(".spacebar");
+        backspace = document.querySelector(".backspace_key");
+        shiftLeft = document.querySelector(".shift_left");
+        shiftRight = document.querySelector(".shift_right");
+        capsLockKey = document.querySelector(".capslock_key");
+        winKey = document.querySelector(".win_key");
+
+        for (let i = 0; i < keys.length; i++) {
+            keys[i].setAttribute("keyname", keys[i].innerText);
+        }
     })
 
     const textDisplayElement = document.getElementById("textDisplay");
