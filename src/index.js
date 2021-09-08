@@ -94,7 +94,8 @@ window.addEventListener("DOMContentLoaded", function () {
         
         if (correct) {
             typeStart = false;
-            renderNewQuote();
+            // renderNewQuote();
+            renderKRQuote();
             clearInterval(timer);
             timerCheckKorean(charCount);
         }
