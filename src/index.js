@@ -1,5 +1,6 @@
 import { Qwerty } from "./scripts/qwerty.js";
 import { Dvorak } from "./scripts/dvorak.js";
+import { Colemak } from "./scripts/colemak.js";
 import { Korean } from "./scripts/korean.js";
 import { alertBanner } from "./scripts/metrics.js";
 import { renderNewQuote, wordCount } from "./scripts/text.js";
@@ -10,18 +11,21 @@ const layout = document.getElementById("layoutChanger");
 const layoutArrow = document.getElementById("layoutButton");
 
 let currentLayout;
-let layouts = [Qwerty, Dvorak];
+let layouts = [Dvorak, Colemak];
+let layoutNames = ["dvorak", "colemak"];
 
 window.addEventListener("DOMContentLoaded", function () {
     currentLayout = layouts[0];
     currentLayout.init();
 
-    layout.innerText = "dvorak";
+    layout.innerText = layoutNames[0];
     renderNewQuote();
     resetTimer();
 
     layoutArrow.addEventListener("click", () => {
         layouts.push(layouts.shift());
+        layoutNames.push(layoutNames.shift());
+        layout.innerText = layoutNames[0];
         currentLayout.elements.main.style.display = "none";
         currentLayout = layouts[0];
         currentLayout.init();
