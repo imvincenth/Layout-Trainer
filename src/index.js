@@ -1,5 +1,6 @@
 import { Qwerty } from "./scripts/qwerty.js";
 import { Dvorak } from "./scripts/dvorak.js";
+import { alertBanner } from "./scripts/metrics.js";
 import { renderNewQuote, wordCount } from "./scripts/text.js";
 import { resetTimer, startTimer } from "./scripts/metrics.js";
 import { timerCheck } from "./scripts/metrics.js";
@@ -35,6 +36,7 @@ window.addEventListener("DOMContentLoaded", function () {
         
         if (!typeStart) {
             typeStart = true;
+            alertBanner.innerText = "";
             timer = setInterval(startTimer, 1000);
         }
         

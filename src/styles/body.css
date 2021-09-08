@@ -12,6 +12,17 @@
     margin-left: 20px;
 }
 
+.alert {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    background-color: transparent;
+    font-size: xx-large;
+    width: 100%;
+    height: 10px;
+    color: green;
+}
+
 .refresh {
     position: absolute;
     top: 50%;
@@ -45,5 +56,5 @@ body {
 .main {
     display: flex;
     justify-content: center;
-    
+
 }
