@@ -9,11 +9,11 @@
     width: 100%;
     height: 50px;
     align-items: center;
-    color: #ECEFF4;
+    color: #D08770;
 }
 
 .fa {
-    color: #ECEFF4;
+    color: #D08770;
 }
 
 a:focus {
@@ -58,7 +58,7 @@ a:focus {
 body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     transition: 0.2s;
-    background-color:#3B4252;
+    background-color:#2E3440;
     color: #ECEFF4;
     display: flex;
     justify-content: center;

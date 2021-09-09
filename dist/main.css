@@ -12,11 +12,11 @@
     width: 100%;
     height: 50px;
     align-items: center;
-    color: #ECEFF4;
+    color: #D08770;
 }
 
 .fa {
-    color: #ECEFF4;
+    color: #D08770;
 }
 
 a:focus {
@@ -61,7 +61,7 @@ a:focus {
 body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     transition: 0.2s;
-    background-color:#3B4252;
+    background-color:#2E3440;
     color: #ECEFF4;
     display: flex;
     justify-content: center;
@@ -208,7 +208,7 @@ body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 25px;
     color: #ECEFF4;
-    background-color:#2E3440;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .text_input:focus {
@@ -235,8 +235,8 @@ body {
 }
 
 .timer {
-    margin-right: 445px;
-    width: 50px;
+    margin-right: 480px;
+    width: 100%;
     height: 20px;
     font-size: 1.2rem;
     color:#5E81AC;
