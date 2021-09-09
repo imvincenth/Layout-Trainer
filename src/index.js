@@ -36,6 +36,7 @@ layoutArrow.forEach(arrow => {
 
 window.addEventListener("DOMContentLoaded", function () {
     currentLayout = layouts[0];
+
     if (currentLayout) currentLayout.elements.main.style.display = "block";
     layout.innerText = layoutNames[0];
 
@@ -117,6 +118,7 @@ window.addEventListener("DOMContentLoaded", function () {
         } else {
             renderNewQuote();
         }
+        alertBanner.innerText = "";
         clearInterval(timer);
         textInput.focus();
     })

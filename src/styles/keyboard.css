@@ -17,15 +17,15 @@
     transition: 0.4s;
     min-width: 50px;
     height: 50px;
-    background-color: #404040;
+    background-color: rgba(0, 0, 0, 0.5);
     border-radius: 0.5rem;
     position: relative;
     padding: 0;
 }
 
 .keys.active {
-    background-color: white;
-    color: 	#181818;
+    background-color: #ECEFF4;
+    color: 	#2E3440;
 }
 
 .keys.remove {
@@ -34,12 +34,12 @@
 
 @keyframes keys_animation {
     0% {
-        background-color: #181818;
-        color: 	white;
+        background-color: #2E3440;
+        color: 	#ECEFF4;
     }
     100% {
-        background-color: white;
-        color: #181818;
+        background-color: #ECEFF4;
+        color: #2E3440;
     }
 }
 

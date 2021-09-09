@@ -9,6 +9,19 @@
     width: 100%;
     height: 50px;
     align-items: center;
+    color: #ECEFF4;
+}
+
+.fa {
+    color: #ECEFF4;
+}
+
+a:focus {
+    outline: none;
+}
+
+.fa:active {
+    color: #B48EAD;
 }
 
 .alert {
@@ -19,7 +32,7 @@
     font-size: xx-large;
     width: 100%;
     height: 10px;
-    color: green;
+    color: #A3BE8C;
 }
 
 .refresh {
@@ -28,15 +41,15 @@
     height: 50px;
     max-width: 50px;
     border: none;
-    color: 	#404040;
+    color: #81A1C1;
 }
 
 .refresh:active {
-    color: white;
+    color:#B48EAD;
 }
 
 .refresh:focus {
-    color: white;
+    color: #ECEFF4;
     outline: none;
 }
 
@@ -45,8 +58,8 @@
 body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     transition: 0.2s;
-    background-color: #282828;
-    color: white;
+    background-color:#3B4252;
+    color: #ECEFF4;
     display: flex;
     justify-content: center;
     align-items: center;

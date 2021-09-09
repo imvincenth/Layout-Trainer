@@ -11,25 +11,26 @@
 
 .layout_changer {
     /* float: left; */
-    color: 	#404040;
+    color: 	#88C0D0;
     font-size: larger;
     align-self: flex-end;
 }
 
 .layout_button {
     /* float: right; */
-    margin-top: 1px;
+    /* margin-top: 1px; */
     background-color: transparent;
-    color: 	#404040;
+    color: 	#8FBCBB;
     border: none;
     height: 20px;
     width: 20px;
 }
 
 .layout_button:active {
-    color: white;
+    color: #B48EAD;
 }
 
 .layout_button:focus {
     outline: none;
+    color: #ECEFF4;
 }

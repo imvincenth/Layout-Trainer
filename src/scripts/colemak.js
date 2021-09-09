@@ -61,7 +61,7 @@ export const Colemak = {
             return `<i class="material-icons">${iconName}</i>`;
         }
 
-        layoutButton.innerHTML = createIconHTML("arrow_forward_ios");
+        layoutButton.innerHTML = createIconHTML("navigate_next");
 
         keyLayout.forEach(key => {
             const keyElement = document.createElement("div");
