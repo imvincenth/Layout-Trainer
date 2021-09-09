@@ -9,8 +9,8 @@ import { resetTimer, startTimer } from "./scripts/metrics.js";
 import { timerCheck, timerCheckKorean } from "./scripts/metrics.js";
 
 let currentLayout;
-let layouts = [Korean, Dvorak, Colemak, Qwerty];
-let layoutNames = ["korean", "dvorak", "colemak", "qwerty"];
+let layouts = [Korean, Dvorak, Colemak];
+let layoutNames = ["korean", "dvorak", "colemak"];
 layouts.forEach(layout => {
     layout.init();
 })
@@ -116,8 +116,11 @@ window.addEventListener("DOMContentLoaded", function () {
 
     refreshButton.addEventListener("click", () => {
         typeStart = false;
-        renderNewQuote();
-        // renderKRQuote();
+        if (layout.innerText === "korean") {
+            renderKRQuote();
+        } else {
+            renderNewQuote();
+        }
         clearInterval(timer);
         textInput.focus();
     })
