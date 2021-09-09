@@ -1,4 +1,4 @@
-## https://imvincenth.github.io/Layout-Trainer/
+https://imvincenth.github.io/Layout-Trainer/
 
 # Keyboard Layout Trainer
 
