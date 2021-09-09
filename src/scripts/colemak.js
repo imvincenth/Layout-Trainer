@@ -37,9 +37,9 @@ export const Colemak = {
 
         // Creating the layout box feature
         const layoutElement = document.createElement("div");
-        layoutElement.classList.add("layout_changer");
-        layoutElement.classList.add("layout_tooltip");
+        layoutElement.classList.add("layout_changer", "layout_tooltip");
         layoutElement.id = "layoutChanger";
+        layoutElement.setAttribute("data-tooltip", "layout_instruction");
         layoutElement.innerText = "colemak";
 
         const layoutButton = document.createElement("button");

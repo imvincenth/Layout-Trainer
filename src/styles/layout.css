@@ -16,17 +16,6 @@
     align-self: flex-end;
 }
 
-.layout_tooltip {
-    position: relative;
-    height: 60px;
-    width: 250px;
-    background: rgba(0, 0, 0, 0.5);
-    color: #ECEFF4;
-    text-align: center;
-    line-height: 60px;
-    font-size: 18px;
-}
-
 .layout_button {
     /* float: right; */
     /* margin-top: 1px; */

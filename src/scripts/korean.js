@@ -38,8 +38,8 @@ export const Korean = {
         // Creating the layout box feature
         const layoutElement = document.createElement("div");
         layoutElement.classList.add("layout_changer");
-        layoutElement.classList.add("layout_tooltip");
         layoutElement.id = "layoutChanger";
+        layoutElement.setAttribute("data-tooltip", "layout_instruction");
         layoutElement.innerText = "korean"
 
         const layoutButton = document.createElement("button");
