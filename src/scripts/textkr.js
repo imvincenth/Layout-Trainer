@@ -3,6 +3,9 @@ import { resetTimer } from "./metrics.js";
 const textDisplayElement = document.getElementById("textDisplay");
 const textInputElement = document.getElementById("textInput");
 
+let timer = document.getElementById("timer");
+let refresh = document.querySelector(".refresh");
+
 export const ARWEN_API = [
     "제 눈에 안경이다", "꿩 먹고 알 먹는다", "로마는 하루아침에 이루어진 것이 아니다",
     "보기 좋은 떡이 먹기도 좋다", "과부 설움은 홀아비가 안다", "낮말은 새가 듣고 밤말은 쥐가 듣는다",
@@ -57,5 +60,7 @@ export async function renderKRQuote () {
         textDisplayElement.appendChild(charSpan);
     })
     textInputElement.value = null;
+    timer.setAttribute("data-tooltip", "타이핑을 시작하면 타이머가 시작됩니다");
+    refresh.setAttribute("data-tooltip", "텍스트를 새로 고칩니다");
     resetTimer();
 }

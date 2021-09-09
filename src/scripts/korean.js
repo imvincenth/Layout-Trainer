@@ -39,7 +39,7 @@ export const Korean = {
         const layoutElement = document.createElement("div");
         layoutElement.classList.add("layout_changer");
         layoutElement.id = "layoutChanger";
-        layoutElement.setAttribute("data-tooltip", "click the arrow to switch layouts");
+        layoutElement.setAttribute("data-tooltip", "키보드 레이아웃을 변경하려면 옆의 화살표를 클릭하세요");
         layoutElement.innerText = "korean"
 
         const layoutButton = document.createElement("button");

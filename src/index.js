@@ -81,7 +81,7 @@ window.addEventListener("DOMContentLoaded", function () {
             alertBanner.innerText = "";
             timer = setInterval(startTimer, 1000);
         }
-        
+
         let correct = true;
         arrQuote.forEach((charSpan, i) => {
             const char = arrVal[i];

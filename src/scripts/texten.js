@@ -2,6 +2,9 @@ import { resetTimer } from "./metrics.js";
 
 // const RANDOM_QUOTE_API_URL = "https://api.quotable.io/random";
 
+let timer = document.getElementById("timer");
+let refresh = document.querySelector(".refresh");
+
 const CUSTOM_API = [
     "the", "be", "of", "and", "a", "to", "in", "he", "have", "it", "that",
     "for", "they", "I", "with", "as", "not", "on", "she", "at", "by", "this",
@@ -186,5 +189,7 @@ export async function renderNewQuote() {
         textDisplayElement.appendChild(charSpan);
     })
     textInputElement.value = null;
+    timer.setAttribute("data-tooltip", "the timer will start when you start typing");
+    refresh.setAttribute("data-tooltip", "this will refresh the text displayed");
     resetTimer();
 }
