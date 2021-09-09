@@ -18,9 +18,9 @@ export function resetTimer() {
 }
 
 export function timerCheck(wordCount) {
-    alertBanner.innerText = (`${timerElement.innerText} seconds taken, ` + String(Math.floor((wordCount * 60) / Number(timerElement.innerText) + 1000)) + " WPM");
+    alertBanner.innerText = (`${timerElement.innerText} seconds taken, ` + String(Math.floor((wordCount * 60) / Number(timerElement.innerText))) + " WPM");
 }
 
 export function timerCheckKorean(charCount) {
-    alertBanner.innerText = (String(Math.floor((charCount * 60) / Number(timerElement.innerText))) + " CPM");
+    alertBanner.innerText = (`${timerElement.innerText} seconds taken, ` + String(Math.floor((charCount * 60) / Number(timerElement.innerText))) + " CPM");
 }
