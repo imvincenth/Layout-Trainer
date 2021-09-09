@@ -3,7 +3,7 @@ import { resetTimer } from "./metrics.js";
 const textDisplayElement = document.getElementById("textDisplay");
 const textInputElement = document.getElementById("textInput");
 
-export const KOREAN_PHRASES_API = [
+export const ARWEN_API = [
     "제 눈에 안경이다", "꿩 먹고 알 먹는다", "로마는 하루아침에 이루어진 것이 아니다",
     "보기 좋은 떡이 먹기도 좋다", "과부 설움은 홀아비가 안다", "낮말은 새가 듣고 밤말은 쥐가 듣는다",
     "눈에서 멀어지면, 마음에서도 멀어진다", "말을 냇가에 끌고 갈 수는 있어도 억지로 물을 먹일 수는 없다",
@@ -42,7 +42,7 @@ export const KOREAN_PHRASES_API = [
 ]
 
 function getRandomKRQuote() {
-    return KOREAN_PHRASES_API[Math.floor(Math.random()*KOREAN_PHRASES_API.length)];
+    return ARWEN_API[Math.floor(Math.random()*ARWEN_API.length)];
 }
 
 export let charCount;

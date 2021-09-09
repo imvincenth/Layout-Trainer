@@ -124,6 +124,7 @@ window.addEventListener("DOMContentLoaded", function () {
     })
 
     window.addEventListener("keydown", function(e) {
+        console.log(e.code)
         for (let i = 0; i < keys.length; i++) {
             if (e.key === keys[i].getAttribute("keyname") || e.key === keys[i].getAttribute('lowerCaseName')) {
                 keys[i].classList.add("active");
@@ -135,9 +136,11 @@ window.addEventListener("DOMContentLoaded", function () {
                 spaceKey.classList.add("active");
             }
             if (e.code === "ShiftLeft") {
+                shiftLeft.classList.add("active");
                 shiftRight.classList.remove("active");
             }
             if (e.code === "ShiftRight") {
+                shiftRight.classList.add("active");
                 shiftLeft.classList.remove("active");
             }
             if (e.code === "CapsLock") {
@@ -164,12 +167,12 @@ window.addEventListener("DOMContentLoaded", function () {
                 spaceKey.classList.add("remove");
             }
             if (e.code === "ShiftLeft") {
-                shiftRight.classList.remove("active");
-                shiftRight.classList.remove("remove");
+                shiftLeft.classList.remove("active");
+                shiftLeft.classList.add("remove");
             }
             if (e.code === "ShiftRight") {
-                shiftLeft.classList.remove("active");
-                shiftLeft.classList.remove("remove");
+                shiftRight.classList.remove("active");
+                shiftRight.classList.add("remove");
             }
             if (e.code === "MetaLeft") {
                 winKey.classList.remove("active");
