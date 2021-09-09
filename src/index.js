@@ -15,6 +15,7 @@ layouts.forEach(layout => {
     layout.init();
 })
 
+// Layout changing elements
 const layout = document.getElementById("layoutChanger");
 const layoutArrow = document.querySelectorAll(".layout_button");
 
