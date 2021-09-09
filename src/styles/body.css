@@ -53,6 +53,44 @@ a:focus {
     outline: none;
 }
 
+.refresh::before,
+.refresh::after {
+    --scale: 0;
+    position: absolute;
+    top: 465px;
+    right: 24%;
+    height: 25px;
+    width: 50px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 0.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 17px;
+    font-style: italic;
+    transform: translateX(-1%) translateY(5%) scale(var(--scale));
+    transition: 50ms transform;
+}
+
+.refresh::before {
+    content: attr(data-tooltip);
+    color: #ECEFF4;
+    padding: 0.5rem;
+    width: max-content;
+    max-width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+/* .layout_changer::after {
+    content: "";
+    border: 10px solid transparent;
+    border-top-color: black;
+} */
+
+.refresh:hover::before,
+.refresh:hover::after {
+    --scale: 1;
+}
+
 /* to add more color themes, change here */
 
 body {

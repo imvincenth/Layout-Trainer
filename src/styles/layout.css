@@ -1,8 +1,4 @@
 .layout_box {
-    /* position: fixed;
-    top: 89.1%;
-    left: 50%;
-    margin: -25px 0 0 -25px; */
     display: flex;
     justify-content: center;
     margin-top: 10px;
@@ -10,15 +6,50 @@
 }
 
 .layout_changer {
-    /* float: left; */
     color: 	#88C0D0;
     font-size: larger;
     align-self: flex-end;
+    text-align: center;
 }
 
+.layout_changer::before,
+.layout_changer::after {
+    --scale: 0;
+    position: absolute;
+    top: 835px;
+    height: 25px;
+    width: 50px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 0.5rem;
+    font-size: 17px;
+    font-style: italic;
+    transform: translateX(-1%) translateY(5%) scale(var(--scale));
+    transition: 50ms transform;
+}
+
+.layout_changer::before {
+    content: attr(data-tooltip);
+    color: #ECEFF4;
+    padding: 0.5rem;
+    width: max-content;
+    max-width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+/* .layout_changer::after {
+    content: "";
+    border: 10px solid transparent;
+    border-top-color: black;
+} */
+
+.layout_changer:hover::before,
+.layout_changer:hover::after {
+    --scale: 1;
+}
+
+
 .layout_button {
-    /* float: right; */
-    /* margin-top: 1px; */
     background-color: transparent;
     color: 	#8FBCBB;
     border: none;

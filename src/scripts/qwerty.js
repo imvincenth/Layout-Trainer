@@ -37,8 +37,9 @@ export const Qwerty = {
         
         // Creating the layout box feature
         const layoutElement = document.createElement("div");
-        layoutElement.classList.add("layout_changer", "layout_tooltip");
+        layoutElement.classList.add("layout_changer");
         layoutElement.id = "layoutChanger";
+        layoutElement.setAttribute("data-tooltip", "click the arrow to switch layouts");
         layoutElement.innerText = "qwerty";
 
         const layoutButton = document.createElement("button");

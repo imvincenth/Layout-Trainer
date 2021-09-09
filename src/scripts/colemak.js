@@ -39,7 +39,7 @@ export const Colemak = {
         const layoutElement = document.createElement("div");
         layoutElement.classList.add("layout_changer", "layout_tooltip");
         layoutElement.id = "layoutChanger";
-        layoutElement.setAttribute("data-tooltip", "layout_instruction");
+        layoutElement.setAttribute("data-tooltip", "click the arrow to switch layouts");
         layoutElement.innerText = "colemak";
 
         const layoutButton = document.createElement("button");
