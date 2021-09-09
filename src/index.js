@@ -56,6 +56,10 @@ window.addEventListener("DOMContentLoaded", function () {
     let shiftLeft = document.querySelector(".shift_left");
     let shiftRight = document.querySelector(".shift_right");
     let capsLockKey = document.querySelector(".capslock_key");
+    let altKeys = document.querySelectorAll(".alt_key");
+    let ctrlKeys = document.querySelectorAll(".ctrl_key");
+    let enterKey = document.querySelector(".enter_key");
+    let tabKey = document.querySelector(".tab_key");
     let winKey = document.querySelector(".win_key");
     let textInput = document.querySelector(".text_input");
     let refreshButton = document.querySelector(".refresh");
@@ -132,6 +136,12 @@ window.addEventListener("DOMContentLoaded", function () {
             if (e.code === "Backspace") {
                 backspace.classList.add("active");
             }
+            if (e.code === "Tab") {
+                tabKey.classList.add("active");
+            }
+            if (e.code === "Enter") {
+                enterKey.classList.add("active");
+            }
             if (e.code === "Space") {
                 spaceKey.classList.add("active");
             }
@@ -142,6 +152,16 @@ window.addEventListener("DOMContentLoaded", function () {
             if (e.code === "ShiftRight") {
                 shiftRight.classList.add("active");
                 shiftLeft.classList.remove("active");
+            }
+            if (e.code === "ControlLeft" || e.code === "ControlRight") {
+                ctrlKeys.forEach(key => {
+                    key.classList.add("active");
+                })
+            }
+            if (e.code === "AltLeft" || e.code === "AltRight") {
+                altKeys.forEach(key => {
+                    key.classList.add("active");
+                })
             }
             if (e.code === "CapsLock") {
                 capsLockKey.classList.toggle("active");
@@ -162,6 +182,14 @@ window.addEventListener("DOMContentLoaded", function () {
                 backspace.classList.remove("active");
                 backspace.classList.add("remove");
             }
+            if (e.code === "Tab") {
+                tabKey.classList.remove("active");
+                tabKey.classList.add("remove");
+            }
+            if (e.code === "Enter") {
+                enterKey.classList.remove("active");
+                enterKey.classList.add("remove");
+            }
             if (e.code === "Space") {
                 spaceKey.classList.remove("active");
                 spaceKey.classList.add("remove");
@@ -174,12 +202,24 @@ window.addEventListener("DOMContentLoaded", function () {
                 shiftRight.classList.remove("active");
                 shiftRight.classList.add("remove");
             }
+            if (e.code === "ControlLeft" || e.code === "ControlRight") {
+                ctrlKeys.forEach(key => {
+                    key.classList.remove("active");
+                    key.classList.add("remove");
+                })
+            }
+            if (e.code === "AltLeft" || e.code === "AltRight") {
+                altKeys.forEach(key => {
+                    key.classList.remove("active");
+                    key.classList.add("remove");
+                })
+            }
             if (e.code === "MetaLeft") {
                 winKey.classList.remove("active");
             }
             this.setTimeout(() => {
                 keys[i].classList.remove("remove");
-            }, 200)
+            }, 100)
         }
     })
 })
