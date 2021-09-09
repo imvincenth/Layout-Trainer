@@ -24,7 +24,7 @@ This should provide typing practice for people trying to switch to a different k
 ### Technologies
   - `HTML, CSS`
   - `Javascript`
-  - `quotable API` A random quote generator
+  - `Material Icons` For the keyboard modifiers
  
  
 ### Implementation Timeline
