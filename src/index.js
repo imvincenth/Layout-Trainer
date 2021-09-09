@@ -9,8 +9,8 @@ import { resetTimer, startTimer } from "./scripts/metrics.js";
 import { timerCheck, timerCheckKorean } from "./scripts/metrics.js";
 
 let currentLayout;
-let layouts = [Korean, Dvorak, Colemak];
-let layoutNames = ["korean", "dvorak", "colemak"];
+let layouts = [Dvorak, Colemak, Korean];
+let layoutNames = ["dvorak", "colemak", "korean"];
 layouts.forEach(layout => {
     layout.init();
 })
@@ -33,10 +33,6 @@ layoutArrow.forEach(arrow => {
         }
     })
 })
-
-// let currentText;
-// let renderStyles = [renderNewQuote, renderKRQuote];
-// let renderStyleNames = ["english", "korean"];
 
 window.addEventListener("DOMContentLoaded", function () {
     currentLayout = layouts[0];
