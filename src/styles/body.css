@@ -58,7 +58,7 @@ a:focus {
 .refresh::after {
     --scale: 0;
     position: absolute;
-    top: 468px;
+    top: 268px;
     margin-left: 28px;
     height: 21px;
     width: 50px;

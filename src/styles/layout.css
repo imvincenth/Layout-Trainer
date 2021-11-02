@@ -16,7 +16,8 @@
 .layout_changer::after {
     --scale: 0;
     position: absolute;
-    top: 835px;
+    top: 605px;
+    margin-left: 90px;
     height: 21px;
     width: 50px;
     background: rgba(0, 0, 0, 0.5);

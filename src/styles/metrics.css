@@ -18,7 +18,8 @@
 .timer::after {
     --scale: 0;
     position: absolute;
-    top: 355px;
+    top: 180px;
+    margin-left: 18px;
     height: 21px;
     width: 50px;
     background: rgba(0, 0, 0, 0.5);

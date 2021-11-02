@@ -9,8 +9,8 @@ import { resetTimer, startTimer } from "./scripts/metrics.js";
 import { timerCheck, timerCheckKorean } from "./scripts/metrics.js";
 
 let currentLayout;
-let layouts = [Korean, Dvorak, Colemak];
-let layoutNames = ["korean", "dvorak", "colemak"];
+let layouts = [Colemak, Korean, Dvorak];
+let layoutNames = ["colemak", "korean", "dvorak"];
 layouts.forEach(layout => {
     layout.init();
 })

@@ -12,6 +12,7 @@
     width: 100%;
     height: 50px;
     align-items: center;
+    justify-content: center;
     color: #D08770;
 }
 
@@ -60,7 +61,7 @@ a:focus {
 .refresh::after {
     --scale: 0;
     position: absolute;
-    top: 468px;
+    top: 268px;
     margin-left: 28px;
     height: 21px;
     width: 50px;
@@ -215,7 +216,7 @@ body {
     display: grid;
     justify-content: center;
     align-items: center;
-    height: 300px;
+    height: 100px;
 }
 
 .textinput_box {
@@ -284,7 +285,8 @@ body {
 .timer::after {
     --scale: 0;
     position: absolute;
-    top: 355px;
+    top: 180px;
+    margin-left: 18px;
     height: 21px;
     width: 50px;
     background: rgba(0, 0, 0, 0.5);
@@ -335,7 +337,8 @@ body {
 .layout_changer::after {
     --scale: 0;
     position: absolute;
-    top: 835px;
+    top: 605px;
+    margin-left: 90px;
     height: 21px;
     width: 50px;
     background: rgba(0, 0, 0, 0.5);
