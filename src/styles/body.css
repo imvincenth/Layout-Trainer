@@ -9,6 +9,7 @@
     width: 100%;
     height: 50px;
     align-items: center;
+    justify-content: center;
     color: #D08770;
 }
 
@@ -106,8 +107,4 @@ body {
 
 .main {
     
-}
-
-.title {
-  font-size: 35px;
 }
