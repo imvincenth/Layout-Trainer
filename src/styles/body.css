@@ -9,9 +9,11 @@
     width: 100%;
     height: 50px;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     color: #D08770;
 }
+
+
 
 .fa {
     color: #D08770;
@@ -52,6 +54,10 @@ a:focus {
 .refresh:focus {
     color: #ECEFF4;
     outline: none;
+}
+
+.refresh:hover {
+  cursor: pointer;
 }
 
 .refresh::before,
@@ -104,7 +110,7 @@ body {
     align-items: center;
     flex-direction: column;
 }
-n
+
 .main {
     
 }
@@ -115,10 +121,10 @@ n
   left: 50%;
   transform: translate(-50%, -50%) scale(0);
   transition: 200ms ease-in-out;
-  border: 1px solid black;
+  border: 1px solid white;
   border-radius: 10px;
   z-index: 10;
-  background-color: white;
+  background-color: black;
   width: 500px;
   max-width: 80%;
 }
@@ -132,10 +138,10 @@ n
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid white;
 }
 
-.modal-header .title {
+.modal-header .modal-title {
   font-size: 1.25rem;
   font-weight: bold;
 }
@@ -147,6 +153,7 @@ n
   background: none;
   font-size: 1.25rem;
   font-weight: bold;
+  color: white;
 }
 
 .modal-body {

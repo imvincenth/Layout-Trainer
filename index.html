@@ -15,19 +15,28 @@
     
     <body>
         <div class="nav_bar">
-          <a href="https://github.com/imvincenth">
-            <i style="margin: 10px;" class="fa fa-github fa-2x"></i>
-          </a>
-          <p style="font-size: 30px; margin: 20px" class=“title” >layout_trainer</p>
-          <a href="https://www.linkedin.com/in/vincent-hsu-45a6a1220/">
-            <i style="margin: 10px;" class="fa fa-linkedin fa-2x"></i>
-          </a>
+          <div class="nav_bar_left">
+            <a href="https://github.com/imvincenth">
+              <i style="margin-left: 30px;" class="fa fa-github fa-2x"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/vincent-hsu-45a6a1220/">
+              <i style="margin: 20px;" class="fa fa-linkedin fa-2x"></i>
+            </a>
+          </div>
+          
+          <div class="nav_bar_right">
+            <p style="font-size: 35px; 
+            position: absolute;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%)" class=“title” >layout_trainer</p>
+          </div>
         </div>
         
-        <button data-modal-target="#modal">Open Modal</button>
+        <button data-modal-target="#modal">Introduction</button>
   <div class="modal" id="modal">
     <div class="modal-header">
-      <div class="title">Example Modal</div>
+      <div class="modal-title">Example Modal</div>
       <button data-close-button class="close-button">&times;</button>
     </div>
     <div class="modal-body">
