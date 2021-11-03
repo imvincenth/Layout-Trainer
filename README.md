@@ -247,6 +247,7 @@ This should provide typing practice for people trying to switch to a different k
         }
 ```
 
+#### Metrics based on layout language
 ```JavaScript
   export function timerCheck(wordCount) {
     alertBanner.innerText = (`${timerElement.innerText} seconds taken, ` + String(Math.floor((wordCount * 60) / Number(timerElement.innerText))) + " WPM");
