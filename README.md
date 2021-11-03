@@ -19,6 +19,7 @@ This should provide typing practice for people trying to switch to a different k
 ![korean keyboard](https://i.imgur.com/oTBUnCX.png)
 
 #### Scalability with a few lines of code
+Creating new layouts is as easy as copying the QWERTY template file, changing the keyLayout variable to your desired layout, then adding it to the layouts and layoutNames array in the index.js.
 ```JavaScript
   _createKeys() {
         const fragment = document.createDocumentFragment();
@@ -150,6 +151,7 @@ This should provide typing practice for people trying to switch to a different k
 ```
 
 #### Responsive representation of keyboard layout
+Keyboard detects key down events and responds to what keys are being pressed.
 ```JavaScript
   window.addEventListener("keydown", function(e) {
 
@@ -248,6 +250,7 @@ This should provide typing practice for people trying to switch to a different k
 ```
 
 #### Metrics based on layout language
+Completing an English block of text wil calculate words per minute, while completing a block of Korean text will calculate characters per minute.
 ```JavaScript
   export function timerCheck(wordCount) {
     alertBanner.innerText = (`${timerElement.innerText} seconds taken, ` + String(Math.floor((wordCount * 60) / Number(timerElement.innerText))) + " WPM");
