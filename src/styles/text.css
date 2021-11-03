@@ -41,10 +41,10 @@
 }
 
 .correct {
-    color: #4C566A;
+    color: #44475a;
 }
 
 .incorrect {
-    color: #BF616A;
+    color: #ff5555;
     text-decoration: underline;
 }

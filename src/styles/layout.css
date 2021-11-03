@@ -6,7 +6,7 @@
 }
 
 .layout_changer {
-    color: 	#88C0D0;
+    color: 	#ff79c6;
     font-size: larger;
     align-self: flex-end;
     text-align: center;
@@ -16,7 +16,7 @@
 .layout_changer::after {
     --scale: 0;
     position: absolute;
-    top: 605px;
+    top: 635px;
     margin-left: 90px;
     height: 21px;
     width: 50px;
@@ -51,22 +51,27 @@
 
 
 .layout_button {
-    background-color: transparent;
-    color: 	#8FBCBB;
-    border: none;
-    height: 20px;
-    width: 20px;
+  background-color: transparent;
+  color: 	#ff79c6;
+  border: none;
+  height: 20px;
+  width: 20px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .layout_button:active {
-    color: #B48EAD;
+    color: #f1fa8c;
 }
 
 .layout_button:focus {
     outline: none;
-    color: #ECEFF4;
+    color: #f1fa8c;
 }
 
 .layout_button:hover {
   cursor: pointer;
+  color: #f1fa8c
 }

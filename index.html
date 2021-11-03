@@ -33,17 +33,27 @@
           </div>
         </div>
         
-        <button data-modal-target="#modal">Introduction</button>
-  <div class="modal" id="modal">
-    <div class="modal-header">
-      <div class="modal-title">Example Modal</div>
-      <button data-close-button class="close-button">&times;</button>
-    </div>
-    <div class="modal-body">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quod alias ut illo doloremque eum ipsum obcaecati distinctio debitis reiciendis quae quia soluta totam doloribus quos nesciunt necessitatibus, consectetur quisquam accusamus ex, dolorum, dicta vel? Nostrum voluptatem totam, molestiae rem at ad autem dolor ex aperiam. Amet assumenda eos architecto, dolor placeat deserunt voluptatibus tenetur sint officiis perferendis atque! Voluptatem maxime eius eum dolorem dolor exercitationem quis iusto totam! Repudiandae nobis nesciunt sequi iure! Eligendi, eius libero. Ex, repellat sapiente!
-    </div>
-  </div>
-  <div id="overlay"></div>
+        <button data-modal-target="#modal" class="open-button"><span>Instructions</span></button>
+        <div class="modal" id="modal">
+          <div class="modal-header">
+            <div class="modal-title">How to use layout_trainer...</div>
+            <button data-close-button class="close-button">&times;</button>
+          </div>
+          <div class="modal-body">
+            Hello and welcome to layout_trainer, a keyboard layout training application for those who wish to increase their typing speed and accuracy on alternate keyboard layouts. (or Korean)</br></br>
+            To begin using this tool, please <span class="green_text">type the displayed text into the input field</span> under the text block.</br></br>
+            As you begin typing <span class="green_text">the timer</span> above the input field will start counting. </br></br>
+            If you wish to restart or get a new set of text displayed, click <span class="orange_text">the refresh button</span> below the input field. </br></br>
+            The virtual keyboard displays the current layout selected, and responds to your key presses. </br></br>
+            The default starting layout is Colemak. </br>
+            If you wish to change to a different layout, click<span class="pink_text"> the > right arrow</span> located under the keyboard and next to the current layout name. </br></br>
+            <span class="green_text">The currently offered layouts are: 1. Colemak, 2. Korean, 3. Dvorak</span></br></br>
+            When you’ve completed a block, your words per minute (or characters per minute for Korean) will be calculated for you.</br></br>
+            You must get <span class="green_text">100% accuracy</span> to complete a block.</br></br>
+            Thank you for reading!
+          </div>
+        </div>
+        <div id="overlay"></div>
 
         <div id="alert" class="alert"></div>
         
