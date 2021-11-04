@@ -13,7 +13,10 @@
     color: #8be9fd;
 }
 
-
+.nav_bar_right {
+  display: flex;
+  flex-direction: row;
+}
 
 .fa {
     color: #bd93f9;
@@ -134,7 +137,25 @@ body {
   max-width: 80%;
 }
 
+.modal_korean {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border: 1px solid #f8f8f2;
+  border-radius: 10px;
+  z-index: 10;
+  background-color: #282a36;
+  width: 500px;
+  max-width: 80%;
+}
+
 .modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal_korean.active {
   transform: translate(-50%, -50%) scale(1);
 }
 

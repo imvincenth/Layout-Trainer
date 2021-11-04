@@ -33,27 +33,51 @@
           </div>
         </div>
         
-        <button data-modal-target="#modal" class="open-button"><span>click here</span></button>
-        <div class="modal" id="modal">
-          <div class="modal-header">
-            <div class="modal-title">How to use layout_trainer...</div>
-            <button data-close-button class="close-button">&times;</button>
+        <div class="instructions_bar">
+
+          <button data-modal-target="#modal" class="open-button"><span>click here</span></button>
+          <div class="modal" id="modal">
+            <div class="modal-header">
+              <div class="modal-title">How to use layout_trainer...</div>
+              <button data-close-button class="close-button">&times;</button>
+            </div>
+            <div class="modal-body">
+              Hello and welcome to layout_trainer, a keyboard layout training application for those who wish to increase their typing speed and accuracy on alternate keyboard layouts. (or Korean 한글)</br></br>
+              To begin using this tool, please <span class="green_text">type the displayed text into the input field</span> under the text block.</br></br>
+              As you begin typing <span class="green_text">the timer</span> above the input field will start counting. </br></br>
+              If you wish to restart or get a new set of text displayed, click <span class="orange_text">the refresh button</span> below the input field. </br></br>
+              The virtual keyboard displays the current layout selected, and responds to your key presses. </br></br>
+              The default starting layout is Colemak. </br>
+              If you wish to change to a different layout, click<span class="pink_text"> the > right arrow</span> located under the keyboard and next to the current layout name. </br></br>
+              <span class="green_text">The currently offered layouts are: 1. Colemak, 2. Korean (한글), 3. Dvorak</span></br></br>
+              When you’ve completed a block, your words per minute (or characters per minute for Korean) will be calculated for you.</br></br>
+              You must get <span class="green_text">100% accuracy</span> to complete a block.</br></br>
+              Thank you for reading!
+            </div>
           </div>
-          <div class="modal-body">
-            Hello and welcome to layout_trainer, a keyboard layout training application for those who wish to increase their typing speed and accuracy on alternate keyboard layouts. (or Korean)</br></br>
-            To begin using this tool, please <span class="green_text">type the displayed text into the input field</span> under the text block.</br></br>
-            As you begin typing <span class="green_text">the timer</span> above the input field will start counting. </br></br>
-            If you wish to restart or get a new set of text displayed, click <span class="orange_text">the refresh button</span> below the input field. </br></br>
-            The virtual keyboard displays the current layout selected, and responds to your key presses. </br></br>
-            The default starting layout is Colemak. </br>
-            If you wish to change to a different layout, click<span class="pink_text"> the > right arrow</span> located under the keyboard and next to the current layout name. </br></br>
-            <span class="green_text">The currently offered layouts are: 1. Colemak, 2. Korean, 3. Dvorak</span></br></br>
-            When you’ve completed a block, your words per minute (or characters per minute for Korean) will be calculated for you.</br></br>
-            You must get <span class="green_text">100% accuracy</span> to complete a block.</br></br>
-            Thank you for reading!
+
+          <button data-modal-target="#modal-korean" class="open-button"><span>한글</span></button>
+          <div class="modal" id="modal-korean">
+            <div class="modal-header">
+              <div class="modal-title">layout_trainer 설명서</div>
+              <button data-close-button class="close-button">&times;</button>
+            </div>
+            <div class="modal-body">
+              레이아웃 트레이너에 오신 것을 환영합니다. 키보드 레이아웃 트레이닝은 타이핑 속도와 타이핑 정확도를 높이려는 사용자를 위한 어플리케이션입니다.</br></br>
+              사용을 위해서는 <span class="green_text">표시된 텍스트 아래에 동일한 텍스트를 입력하십시오.</span></br></br>
+              문장 입력이 시작되면 <span class="green_text">타이머가</span> 시작됩니다.</br></br>
+              재시작을 원하시거나 새로운 문장을 원하시면 입력창 아래에 있는 <span class="orange_text">새로고침 버튼을</span> 클릭하십시오.</br></br>
+              가상 키보드는 현재 선택하신 레이아웃 키보드가 표시 됩니다.</br></br>
+              기본 키보드 레이아웃은 콜맥입니다.</br></br>
+              다른 레이아웃 선택을 원하신다면, 가상 키보드 아래의  레이아웃 이름 <span class="pink_text">옆의 ‘>’ 화살표를</span> 클릭하여 레이아웃을 선택하실 수 있습니다.</br></br>
+              <span class="green_text">현재 제공하고 있는 키보드 레이아웃은 1. 콜맥 2. 한글 3. 드보락 입니다.</span></br></br>
+              문장 입력이 끝나면 분당 글자입력 수치가 계산되어 표시됩니다.</br></br>
+              문장 입력을 끝내기 위해서는 정확도 <span class="green_text">100%가</span> 필요합니다!</br></br>
+              감사합니다.
+            </div>
           </div>
+          <div id="overlay"></div>
         </div>
-        <div id="overlay"></div>
 
         <div id="alert" class="alert"></div>
         
