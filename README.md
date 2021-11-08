@@ -4,7 +4,7 @@
 ### Background & Overview
 
 The traditional QWERTY layout was designed for typewriters to minimize jams
-by spreading the most commmonly used keys across the keyboard. There have been more ergonomic 
+by spreading the most commonly used keys across the keyboard. There have been more ergonomic 
 and efficient layout designed for a more accurate and comfortable typing experience.
 While switching to a different keyboard layout is difficult, the benefits are great and better tools should make the transition more smooth.
 This should provide typing practice for people trying to switch to a different keyboard layout.
