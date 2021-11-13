@@ -4,8 +4,8 @@
 ### Background & Overview
 
 The traditional QWERTY layout was designed for typewriters to minimize jams
-by spreading the most commmonly used keys across the keyboard. There have been more ergonomic 
-and efficient layout designed for a more accurate and comfortable typing experience.
+by spreading the most commonly used keys across the keyboard. There have been more ergonomic 
+and efficient layouts designed for a more accurate and comfortable typing experience.
 While switching to a different keyboard layout is difficult, the benefits are great and better tools should make the transition more smooth.
 This should provide typing practice for people trying to switch to a different keyboard layout.
 ### [try layout_trainer here](https://imvincenth.github.io/Layout-Trainer/)
@@ -148,105 +148,6 @@ Creating new layouts is as easy as copying the QWERTY template file, changing th
 
         return fragment;
     },
-```
-
-#### Responsive representation of keyboard layout
-Keyboard detects key down events and responds to what keys are being pressed.
-```JavaScript
-  window.addEventListener("keydown", function(e) {
-
-        for (let i = 0; i < keys.length; i++) {
-            if (e.key === keys[i].getAttribute("keyname") || e.key === keys[i].getAttribute('lowerCaseName')) {
-                keys[i].classList.add("active");
-            }
-            if (e.code === "Backspace") {
-                backspace.classList.add("active");
-            }
-            if (e.code === "Tab") {
-                tabKey.classList.add("active");
-            }
-            if (e.code === "Enter") {
-                enterKey.classList.add("active");
-            }
-            if (e.code === "Space") {
-                spaceKey.classList.add("active");
-            }
-            if (e.code === "ShiftLeft") {
-                shiftLeft.classList.add("active");
-                shiftRight.classList.remove("active");
-            }
-            if (e.code === "ShiftRight") {
-                shiftRight.classList.add("active");
-                shiftLeft.classList.remove("active");
-            }
-            if (e.code === "ControlLeft" || e.code === "ControlRight") {
-                ctrlKeys.forEach(key => {
-                    key.classList.add("active");
-                })
-            }
-            if (e.code === "AltLeft" || e.code === "AltRight") {
-                altKeys.forEach(key => {
-                    key.classList.add("active");
-                })
-            }
-            if (e.code === "CapsLock") {
-                capsLockKey.classList.toggle("active");
-            }
-            if (e.code === "MetaLeft") {
-                winKey.classList.add("active");
-            }
-        }
-    })
-
-    window.addEventListener("keyup", function(e) {
-        for (let i = 0; i < keys.length; i++) {
-            if (e.key === keys[i].getAttribute("keyname") || e.key === keys[i].getAttribute('lowerCaseName')) {
-                keys[i].classList.remove("active");
-                keys[i].classList.add("remove");
-            }
-            if (e.code === "Backspace") {
-                backspace.classList.remove("active");
-                backspace.classList.add("remove");
-            }
-            if (e.code === "Tab") {
-                tabKey.classList.remove("active");
-                tabKey.classList.add("remove");
-            }
-            if (e.code === "Enter") {
-                enterKey.classList.remove("active");
-                enterKey.classList.add("remove");
-            }
-            if (e.code === "Space") {
-                spaceKey.classList.remove("active");
-                spaceKey.classList.add("remove");
-            }
-            if (e.code === "ShiftLeft") {
-                shiftLeft.classList.remove("active");
-                shiftLeft.classList.add("remove");
-            }
-            if (e.code === "ShiftRight") {
-                shiftRight.classList.remove("active");
-                shiftRight.classList.add("remove");
-            }
-            if (e.code === "ControlLeft" || e.code === "ControlRight") {
-                ctrlKeys.forEach(key => {
-                    key.classList.remove("active");
-                    key.classList.add("remove");
-                })
-            }
-            if (e.code === "AltLeft" || e.code === "AltRight") {
-                altKeys.forEach(key => {
-                    key.classList.remove("active");
-                    key.classList.add("remove");
-                })
-            }
-            if (e.code === "MetaLeft") {
-                winKey.classList.remove("active");
-            }
-            this.setTimeout(() => {
-                keys[i].classList.remove("remove");
-            }, 100)
-        }
 ```
 
 #### Metrics based on layout language
