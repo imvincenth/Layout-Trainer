@@ -32,8 +32,12 @@ layoutArrow.forEach(arrow => {
         currentLayout = layouts[0];
         currentLayout.elements.main.style.display = "block";
         if (layout.innerText === "korean") {
+            clearInterval(timer);
+            alertBanner.innerText = "";
             renderKRQuote();
         } else {
+            clearInterval(timer);
+            alertBanner.innerText = "";
             renderNewQuote();
         }
     })
@@ -138,16 +142,13 @@ window.addEventListener("DOMContentLoaded", function () {
         
         if (correct) {
             typeStart = false;
-            if (layout.innerText === "korean") {
-                renderKRQuote();
-            } else {
-                renderNewQuote();
-            }
             clearInterval(timer);
             if (layout.innerText === "korean") {
-                timerCheckKorean(charCount);
+              timerCheckKorean(charCount);
+              renderKRQuote();
             } else {
-                timerCheck(wordCount);
+              timerCheck(wordCount);
+              renderNewQuote();
             }
         }
     })
